@@ -8,10 +8,10 @@ const JobDetails = () => {
     const {id} = useParams();
     const idInt = parseInt(id);
     const job = jobs.find(job => job.id === idInt);
-    console.log(jobs); 
+    // console.log(jobs); 
 
     const handleApplyJob = () => {
-        saveJobApplication(id);
+        saveJobApplication(idInt);
         toast('You have applied successfully');
     }
     return (
